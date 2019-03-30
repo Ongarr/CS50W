@@ -1,0 +1,74 @@
+$hoho: rgb(224, 236, 241);
+$on-small: 768px;
+
+%text-wrapper {
+    border-radius: 15px;
+    border: 10px dashed white;
+    background-color: $hoho;
+}
+
+@media (max-width: $on-small) {
+    %text-wrapper {
+        border: 0px;
+    }
+}
+
+body {
+background:
+    url(https://dzidziusiowo.pl/i/bg_top.png) repeat-x top,
+    -webkit-linear-gradient(top, #fcf8fa 0%, #f9f1f5 50%, #fcf8fa 100%);
+}
+
+a, p {
+    font-family: 'Roboto';
+}
+
+.nav {
+    background-color: $hoho;
+    max-width: 1110px;
+    border-radius: 0 0 15px 15px;
+    margin: auto;
+    a {
+        color: black;
+        font-size: 20px;
+        font-weight: 300;
+
+    }
+}
+
+.hero--image {
+
+    img {
+        max-width:100%;
+        max-height:100%;
+    }
+}
+/*Tutaj powinnien byc media tylko na mobile*/
+@media (max-width: $on-small) {
+.hero--text {
+    padding-top: 125px;
+}
+}
+
+.big-header {
+    text-align: left;
+    padding: 20px 0px;
+}
+
+.small-header {
+    padding: 15px 0px 10px 0px;
+}
+
+.niemowlak--hero {
+    margin-top: 50px;
+    background: linear-gradient(rgba(216, 214, 214, 0.562) 20%,
+    rgba(255, 255, 255, 0)),
+    url(/img/hero-image.jpg);
+    background-position: center center;
+    padding: 100px 0;
+    border-radius: 0 0 15px 15px ;
+}
+.content {
+    @extend %text-wrapper;
+    margin-top: 30px;
+}
